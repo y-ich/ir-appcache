@@ -1,5 +1,13 @@
 Router.configure({layoutTemplate: 'layout'});
 
-Router.route('/', function(){ this.render('home');});
+Router.route('/', function() {
+    this.redirect("/home");
+});
 
-Router.route('/test', function(){ this.render('test');});
+Router.route('/home', function() {
+    this.render('home');
+});
+
+Router.route('/test', function() {
+    this.render('test');
+});
